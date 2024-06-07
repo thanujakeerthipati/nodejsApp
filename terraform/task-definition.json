@@ -1,0 +1,60 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:315412305892:task-definition/my-ecs-task:9",
+    "containerDefinitions": [
+        {
+            "name": "helloworld",
+            "image": "315412305892.dkr.ecr.us-east-1.amazonaws.com/ecs-app:latest",
+            "cpu": 256,
+            "memory": 512,
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "systemControls": []
+        }
+    ],
+    "family": "my-ecs-task",
+    "executionRoleArn": "arn:aws:iam::315412305892:role/ecs-app-role",
+    "networkMode": "awsvpc",
+    "revision": 9,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "2048",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2024-06-07T15:57:20.826Z",
+    "registeredBy": "arn:aws:iam::315412305892:user/terraformcli",
+    "tags": []
+}
